@@ -510,7 +510,7 @@ footer .footer-sns .btn + .btn {
 
 .img-up.hover img {
     object-fit: cover;
-    transition: 0.3s linear;
+    transition: 0.2s linear;
     border-radius: 20px;
     
 }
@@ -518,10 +518,12 @@ footer .footer-sns .btn + .btn {
 .img-up:hover img {
     transform: scale(1.2);
     overflow: hidden;
+    border-radius: 20px;
 }
 
 .img-up {
     overflow: hidden;
+    border-radius: 20px;
 }
 
 /* Top button */

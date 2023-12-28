@@ -1,18 +1,48 @@
 
+// 사업소개 부분
+$(document).ready(function() {
+  /* 1 */
+  $(window).scroll( function(){
+      /* 2 */
+      $('.overview-content').each( function(i){
+          var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+          var bottom_of_window = $(window).scrollTop() + $(window).height();
+          /* 3 */
+          if( bottom_of_window > bottom_of_object){
+              $(this).animate({'opacity':'1'},300);
+          }
+      }); 
+  })
+});
 
-$(window).on("load",function() {
-    $(window).scroll(function() {
-      $(".overview-content").each(function() {
-        /* Check the location of each desired element */
-        var objectBottom = $(this).offset().top + $(this).outerHeight();
-        var windowBottom = $(window).scrollTop() + $(window).innerHeight();
-        
-        /* If the element is completely within bounds of the window, fade it in */
-        if (objectBottom < windowBottom) { //object comes into view (scrolling down)
-          if ($(this).css("opacity")==0) {$(this).fadeTo(300,1);}
-        } else { //object goes out of view (scrolling up)
-          if ($(this).css("opacity")==1) {$(this).fadeTo(300,0);}
-        }
-      });
-    }); $(window).scroll(); //invoke scroll-handler on page-load
-  });
+// ceo메세지 부분
+$(document).ready(function() {
+  /* 1 */
+  $(window).scroll( function(){
+      /* 2 */
+      $('.about_ceo').each( function(i){
+          var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+          var bottom_of_window = $(window).scrollTop() + $(window).height();
+          /* 3 */
+          if( bottom_of_window > bottom_of_object/2){
+              $(this).animate({'opacity':'1'},1000);
+          }
+      }); 
+  })
+});
+
+// 회사개요 부분
+$(document).ready(function() {
+  /* 1 */
+  $(window).scroll( function(){
+      /* 2 */
+      $('.all_wrap').each( function(i){
+          var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+          var bottom_of_window = $(window).scrollTop() + $(window).height();
+          /* 3 */
+          if( bottom_of_window > bottom_of_object/20){
+              $(this).animate({'opacity':'1'},2000);
+          }
+      }); 
+  })
+});
